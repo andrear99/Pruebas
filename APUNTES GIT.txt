@@ -1,0 +1,43 @@
+-------------------- APUNTES GIT --------------------
+
+COMANDOS CONSOLA:
+
+git init : Se ejecuta una sola vez cuando queremos que GIT comience a hacer un seguimiento
+de nuestro proyecto.
+Con esto GIT crea dos areas de trabajo:
+
+	-staging area: donde se almacenan los archivos de manera TEMPORAL. 
+	-repositorio local: se almacenan las copias (versiones) de nuestros archivos. 
+	De aquí es de donde podremos "rescatar" las versiones de los archivos si así lo deseamos.
+Hay un primer area exrtra: el directorio de trabajo, que son nuestros archivos originales.
+
+git add : para indicarle a git de qué archivos queremos que haga un seguimiento. Hacer
+un seguimiento es transladar los archivos desde el directorio de trabajo hasta el 
+staging area.
+			"git add . " -> Agrega todos los archivos al staging area (git les hará seguimiento)
+			"git add nombreArchivo" -> Agrega al staging area SOLO ese archivo
+
+git commit -m "comentario aclaratorio": llevamos el archivo desde el staging area al rep. local, es decir, creamos la versión de nuestro archivo qe podremos recuperar después si así lo deseamos.
+
+git status -s: indica los archivos y directorios que tenemos ahora mismo en la carpeta del proyecto
+donde está la consola metida. Sin embarrgo, cuando aparecen signod "??" al lado de estos significa que, aunque git sabe que estan ahi, no les esta haciendo ningun seguimiento (es decir, no puede crear copias
+de seg).
+En cambio, si hacemos un "git add "archivo" " ese archivo lo estaremos comenzando a seguir (es decir, lo mandamos al staging area). A partir de ese momento, en lugar d eun "?" aparecera un "A" verde.
+Si luego hacemos un git commit a ese mismo archivo, lo llevaremos al repositorio local. Por lo tanto, al hacer el git status -s de nuevo, ese archivo NO APARECERÁ.
+Es decir, el git status solo nos informa de los archivos que no estan aun en el rep local.
+
+Si hiciéramos algún cambio en el archivo del repositorio (modificarlo de cualquier forma), al usar
+git status -s, este volvería a aparecernos. Porque nosotros llevamos al repositorio, en su momento, una "versión" de nuestro archivo. Ahora, al haberlo modificado, hemos creado una versión "actualizada" de la cual aún no tenemos copia de seguridad. Por eso git nos informa.
+Por lo tanto, esa "nueva versión", en caso de que queramos hacerle una copia de seguridad, deberíamos primero llevrla a la staging area (hacerle un add) y después hacerle un commit para llevarla al rep. local.
+
+Para ello podemos usar el siguiente comando:
+git commit -am "comentario aclaratorio": Es un add de todos los archivos y un commit a la vez (tambien puedo hacer el add y el commit por separado, es tan solo un atajillo).
+
+git log --oneline : este comando me va a sacar por consola todas las "copias de seguridad" que haya hecho de cada archivo (es decir, todos los commits).
+
+
+git reset --hard código : este comando se usa cuando queremos qque nuestro archivo vuelva a ser como alguna de las versiones anteriores que tenemos guardadas en el rep local (las que hemos ido guardadno usando primero add y luego commit). El código se refiere a la cifra que aparece delante de cada version cuando usamos el comando git log --oneline. Usaremos el codigo de la version a la que queramos volver.
+
+
+---------------- GITHUB
+¿Qué es?  -> Es como una especie de nube a la que puedes subir esas "copias de seguridad" que haces de cada versión. En vezz de guardar esas copias en tu propio disco duro (que puede por ejemplo romperse), pues las guardas en GitHub y sabes que ahí están a salvo.

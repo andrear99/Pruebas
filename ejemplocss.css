@@ -1,0 +1,40 @@
+
+body {
+    background-image: url("fondo.svg");
+    background-size: 30%;
+    
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: cornsilk;
+}
+
+p.tres {
+    background-color: darkgreen;
+    width: 12cm;
+    height: 7cm;
+    text-align: justify;
+}
+
+p.uno {
+    background-color: aqua;
+    opacity: 0.5;
+    width: 7cm;
+    height: 10cm;
+    text-align: justify;
+
+}
+
+div.dos {
+    color: chartreuse;
+    border: rgb(94, 255, 0) 0.3cm solid;
+    text-align: center;
+    font-style: oblique;
+    
+}
+
+p.cuatro {
+    color: crimson;
+    background-color: rgb(233, 36, 102);
+    opacity: 0.5;
+    height: 4cm;
+}
