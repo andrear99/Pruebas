@@ -39,5 +39,10 @@ git log --oneline : este comando me va a sacar por consola todas las "copias de 
 git reset --hard código : este comando se usa cuando queremos qque nuestro archivo vuelva a ser como alguna de las versiones anteriores que tenemos guardadas en el rep local (las que hemos ido guardadno usando primero add y luego commit). El código se refiere a la cifra que aparece delante de cada version cuando usamos el comando git log --oneline. Usaremos el codigo de la version a la que queramos volver.
 
 
+git push: este comando sirve para subir (es decir, actualziar) los cambios que hemos hecho en local (en nuestro rep. local del pc) a remoto (es decir, a la nube de GitHub).
+
+
+git pull: este comando sirve para subir los cambios que hayamos hecho en la copia de seg que tenemos en la nube de GitHub (ya qu podemos editar directamente en la pagina de github) a el rep. local (la copia del proyecto que tenemos en nuestro pc).
+
 ---------------- GITHUB
 ¿Qué es?  -> Es como una especie de nube a la que puedes subir esas "copias de seguridad" que haces de cada versión. En vezz de guardar esas copias en tu propio disco duro (que puede por ejemplo romperse), pues las guardas en GitHub y sabes que ahí están a salvo.
