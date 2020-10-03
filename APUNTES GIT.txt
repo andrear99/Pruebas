@@ -50,8 +50,18 @@ git pull: este comando sirve para subir los cambios que hayamos hecho en la copi
 git tag nombreDeLaVersion -m "descripcion de la versión" : Este comando sirve para cuando pensamos que nuestro proyecto ha llegado a un punto en el que consideramos que está lo suficientemente completo como para crear una versión de este. Esto no significa que hayamos acabado el proyecto, sino que, por ejemplo, hemos acabado la fase alfa. Entonces creamos una tag diciendo "git tag 02-10-2020vAlpha -m "Versión alpha del proyecto" ". Y así, aunque sigas avanzando y añadiendo cosas al proyecto, cualquier persona en cualquier momento si quiere podrá descargar el proyecto en un zip pero tal y como estaba en el momento en el que se creó la tag. Es como guardar una copia de seg. del proyecto pero tal y como estaba en un instante concreto. Cuando creemos más tags, si vamos a la pestañita "tags" de nuestro proy. en github, podremos acceder a cómo estaba nuestro proyecto en cada versión (cada tag), independientemente de cómo esté ahora mismo.Esto sirve para, por ejemplo, si la versión en la que estamos ahora no funciona bien, poder volver a una versión anterior sin ningún tipo de problema.
 OJO! Al hacer el git tag desde consola esta tag solo se crea en el rep. local. Para actualizarla en github tendremos que usar git push --tags.
 
+git push --tags: Si he creado una tag usando "git tag nombreDeLaVersion -m "descripcion de la versión" ", debo subirla a github. Para eso sirve este comando.
 
 git clone url : Este comando sirve para, directamente, clonar un proyecto de un repositorio remoto de github a tu repositorio local. Es decir, si por ejemplo ocurre un desastre y se te borra el proyecto completo de tu pc (rep. local), puedes ir a github y coger la url del proyecto y usar este comando. Automáticamente el proyecto volverá a estar en tu pc.
+
+
+git branch nombreRama : Sirve para crear una rama adicional a la master. En esa rama se va a crear una copia de mi proyecto donde podré trabajar sin que afecte para nada al proyecto en la rama principal. Son totalmente independientes entre sí. En esta rama también podré hacer commits si quiero, al igual que en la master, pero como digo, no afectará al proyecto que esté en la rama ppal.
+
+
+git branch : Me van a salir por consola los nombres de las ramas que tengo creadas en este momento, y se me indicará con un asterisco y en verde en qué rama me encuentro ahora mismo.
+
+
+git checkout nombreRama: Sirve para moverme de la rama en la que estoy a la rama "ramaNombre".
 
 ---------------- GITHUB
 ¿Qué es?  -> Es como una especie de nube a la que puedes subir esas "copias de seguridad" que haces de cada versión. En vezz de guardar esas copias en tu propio disco duro (que puede por ejemplo romperse), pues las guardas en GitHub y sabes que ahí están a salvo.
