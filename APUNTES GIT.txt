@@ -42,9 +42,16 @@ git reset --hard código : este comando se usa cuando queremos qque nuestro arch
 
 
 git push: este comando sirve para subir (es decir, actualziar) los cambios que hemos hecho en local (en nuestro rep. local del pc) a remoto (es decir, a la nube de GitHub).
-
+OJO!!! Si lo que queremos es actualizar alguna tag que hemos creado en el rep. local, debemos usar "git push --tags".
 
 git pull: este comando sirve para subir los cambios que hayamos hecho en la copia de seg que tenemos en la nube de GitHub (ya qu podemos editar directamente en la pagina de github) a el rep. local (la copia del proyecto que tenemos en nuestro pc).
+
+
+git tag nombreDeLaVersion -m "descripcion de la versión" : Este comando sirve para cuando pensamos que nuestro proyecto ha llegado a un punto en el que consideramos que está lo suficientemente completo como para crear una versión de este. Esto no significa que hayamos acabado el proyecto, sino que, por ejemplo, hemos acabado la fase alfa. Entonces creamos una tag diciendo "git tag 02-10-2020vAlpha -m "Versión alpha del proyecto" ". Y así, aunque sigas avanzando y añadiendo cosas al proyecto, cualquier persona en cualquier momento si quiere podrá descargar el proyecto en un zip pero tal y como estaba en el momento en el que se creó la tag. Es como guardar una copia de seg. del proyecto pero tal y como estaba en un instante concreto. Cuando creemos más tags, si vamos a la pestañita "tags" de nuestro proy. en github, podremos acceder a cómo estaba nuestro proyecto en cada versión (cada tag), independientemente de cómo esté ahora mismo.Esto sirve para, por ejemplo, si la versión en la que estamos ahora no funciona bien, poder volver a una versión anterior sin ningún tipo de problema.
+OJO! Al hacer el git tag desde consola esta tag solo se crea en el rep. local. Para actualizarla en github tendremos que usar git push --tags.
+
+
+git clone url : Este comando sirve para, directamente, clonar un proyecto de un repositorio remoto de github a tu repositorio local. Es decir, si por ejemplo ocurre un desastre y se te borra el proyecto completo de tu pc (rep. local), puedes ir a github y coger la url del proyecto y usar este comando. Automáticamente el proyecto volverá a estar en tu pc.
 
 ---------------- GITHUB
 ¿Qué es?  -> Es como una especie de nube a la que puedes subir esas "copias de seguridad" que haces de cada versión. En vezz de guardar esas copias en tu propio disco duro (que puede por ejemplo romperse), pues las guardas en GitHub y sabes que ahí están a salvo.
