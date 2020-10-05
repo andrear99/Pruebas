@@ -1,3 +1,4 @@
+
 function retornarFecha()
 {
   var fecha
@@ -12,4 +13,13 @@ function retornarHora()
   fecha=new Date();
   var cadena=fecha.getHours()+':'+fecha.getMinutes()+':'+fecha.getSeconds();
   return cadena; 
+}
+
+function botonDale(){
+
+  alert('Ey! Vamos a cambiar el titulo de la pagina. ¿Qué quieres poner?');
+  var t;
+  
+
+
 }
